@@ -58,12 +58,12 @@ if op == '👪 Hogares colombianos':
     #Analisis de Hogares
     st.markdown("<h1 style='text-align: center;color:#E89B8A; '>Analisis de los hogares Colombianos</h1>", unsafe_allow_html=True)
     st.markdown("<h3 style='text-align: justify; '>A continuacion se mostraran los resultados obtenidos acerca de los hogares Colombianos con los analisis correspondientes</h3>", unsafe_allow_html=True)
-    c1, c2, c3 = st.beta_columns((0.4,1,1)) # Entre paréntesis se indica el tamaño de las columnas
+    c1, c2, c3 = st.columns((0.4,1,1)) # Entre paréntesis se indica el tamaño de las columnas
     c2.image('familias.jpg',width = 500)
     
     
     #Primera Grafica
-    c1, c2 = st.beta_columns((1.2,1)) # Entre paréntesis se indica el tamaño de las columnas
+    c1, c2 = st.columns((1.2,1)) # Entre paréntesis se indica el tamaño de las columnas
 
    
     x4 = hogares.groupby('minimo')[['directorio']].count().reset_index().rename(columns = {'directorio' : 'acomulado'})
