@@ -10,7 +10,7 @@ st.sidebar.image('https://www.pragma.com.co/hs-fs/hubfs/logo-udea.png?width=312&
 
 #Barra de navegacion
 
-op = st.sidebar.radio('',['🏠 Inicio', '👪 Hogares colombianos', '🏭 Empresas del pais','📊 Analisis Agrupado','🤝 Concluciones'])
+op = st.sidebar.radio('',['🏠 Inicio', '👪 Hogares colombianos', '🏭 Empresas del pais','📊 Análisis Agrupado','🤝 Concluciones'])
 st.sidebar.info('Hecho por: Mayra Alejandra Bastidas, Sebastian Franco, Karol Lagos')
 
 if op == '🏠 Inicio':
@@ -105,7 +105,7 @@ if op == '👪 Hogares colombianos':
         yaxis_title = 'Ingresos',
         template = 'simple_white',
         title_x = 0.5)
-    st.info('En la gráfica se observa que las familias que tienen mejores ingresos son de la ciudad de Medellín, le sigue las familias que habitan en la ciudad de Bogotá; esto puede ser explicado con que son las ciudades más grandes en varios sectores económicos.  También, se observa que las familias que viven en Tunja, Armenia, Sincelejo, Ibague, Monteria, Pasto y Riohacha tienen ingresos similares, finalmente se logra analizar que las familias que habitan en Quibdó tienen los ingresos más bajos.')
+    st.info('En la gráfica se observa que las familias que tienen mejores ingresos son de la ciudad de Bogotá, le sigue las familias que habitan en la ciudad de Medellín; esto puede ser explicado con que son las ciudades más grandes en varios sectores económicos. También, se observa que las familias que viven en Montería, Neiva y santa Marta tienen ingresos similares, finalmente se logra analizar que las familias que habitan en Quibdó, Florencia y Cúcuta tienen los ingresos más bajos.')
     st.plotly_chart(fig,use_container_width=True)
     
     
