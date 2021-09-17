@@ -113,7 +113,7 @@ if op == '👪 Hogares colombianos':
    
     ciudad = st.selectbox('Seleccione ciudad',hogares['dominio'].unique(),index=10)
     
-    c1, c2 = st.beta_columns((1.8,1)) # Entre paréntesis se indica el tamaño de las columnas
+    c1, c2 = st.columns((1.8,1)) # Entre paréntesis se indica el tamaño de las columnas
     
     x2 = hogares.groupby(['dominio','condicion'])[['directorio']].sum().reset_index().rename(columns = {'directorio' : 'acomulado'})        
     fig = px.pie(x2[x2['dominio']==ciudad], values = 'acomulado', names ='condicion',
@@ -155,7 +155,7 @@ if op == '👪 Hogares colombianos':
 if op == '🏭 Empresas del pais':
     st.markdown("<h1 style='text-align: center;color:#E89B8A; '>Analisis de las empresas Colombianas</h1>", unsafe_allow_html=True)
     st.markdown("<h3 style='text-align: justify; '>Esta sección se comprende de los analisis obtenidos de los resultados financieros de las empresas colombianas en los diferentes departamentos de colombia</h3>", unsafe_allow_html=True)
-    c1, c2, c3 = st.beta_columns((0.4,1,1)) # Entre paréntesis se indica el tamaño de las columnas
+    c1, c2, c3 = st.columns((0.4,1,1)) # Entre paréntesis se indica el tamaño de las columnas
     c2.image('empresas.jpg',width = 500)
     
     #Primer grafica
@@ -258,7 +258,7 @@ if op == '📊 Analisis Agrupado':
     
     st.markdown("<h1 style='text-align: center;color:#E89B8A; '>Analisis Agrupado de las empresas y familias Colombianas</h1>", unsafe_allow_html=True)
     st.markdown("<h3 style='text-align: justify; '>Luego de dar una mirada a las condiciones de las familias y empresas, se realizara una exploracion del resultado al combinar los datos de estos dos grupos de interes.</h3>", unsafe_allow_html=True)
-    c1, c2, c3 = st.beta_columns((0.4,1,1)) # Entre paréntesis se indica el tamaño de las columnas
+    c1, c2, c3 = st.columns((0.4,1,1)) # Entre paréntesis se indica el tamaño de las columnas
     c2.image('agrupado.jpg',width = 500)
     
     #Descarga de correlaciones
@@ -271,7 +271,7 @@ if op == '📊 Analisis Agrupado':
     
     x = bodega.corr()
     
-    c1, c2 = st.beta_columns((1,1.7)) # Entre paréntesis se indica el tamaño de las columnas
+    c1, c2 = st.columns((1,1.7)) # Entre paréntesis se indica el tamaño de las columnas
     c1.text('Descarga de correlaciones')
     c1.markdown(get_table_download_link(x), unsafe_allow_html=True)
 
@@ -279,7 +279,7 @@ if op == '📊 Analisis Agrupado':
     
     #Primera Grafica
     st.markdown("<h3 style='text-align: center;color:#E89B8A; '>Ingresos de empresas VS ingresos de familias</h3>", unsafe_allow_html=True)
-    c1, c2 = st.beta_columns((1,1)) # Entre paréntesis se indica el tamaño de las columnas
+    c1, c2 = st.columns((1,1)) # Entre paréntesis se indica el tamaño de las columnas
 
     
     plt.tight_layout()
@@ -303,7 +303,7 @@ if op == '📊 Analisis Agrupado':
     
     #Segunda Grafica
     st.markdown("<h3 style='text-align: center;color:#E89B8A; '>Ingresos de empresas VS Numero de pobres</h3>", unsafe_allow_html=True)
-    c1, c2 = st.beta_columns((1,1)) # Entre paréntesis se indica el tamaño de las columnas
+    c1, c2 = st.columns((1,1)) # Entre paréntesis se indica el tamaño de las columnas
     
     fig = plt.figure()
     plt.tight_layout()
@@ -326,7 +326,7 @@ if op == '📊 Analisis Agrupado':
     
     #Tercera Grafica
     st.markdown("<h3 style='text-align: center;color:#E89B8A; '>Ingresos de empresas VS Numero de indigentes</h3>", unsafe_allow_html=True)
-    c1, c2 = st.beta_columns((1,1)) # Entre paréntesis se indica el tamaño de las columnas
+    c1, c2 = st.columns((1,1)) # Entre paréntesis se indica el tamaño de las columnas
     
     fig = plt.figure()
     plt.tight_layout()
@@ -348,7 +348,7 @@ if op == '📊 Analisis Agrupado':
     
     #Cuarta grafica
     st.markdown("<h3 style='text-align: center;color:#E89B8A; '>Numero de pobres VS numero de indigentes</h3>", unsafe_allow_html=True)
-    c1, c2 = st.beta_columns((1,1)) # Entre paréntesis se indica el tamaño de las columnas
+    c1, c2 = st.columns((1,1)) # Entre paréntesis se indica el tamaño de las columnas
     
     fig = plt.figure()
     plt.tight_layout()
@@ -363,7 +363,7 @@ if op == '📊 Analisis Agrupado':
 if op== '🤝 Concluciones':
     
     st.markdown("<h1 style='text-align: center;color:#E89B8A; '>Concluciones</h1>", unsafe_allow_html=True)
-    c1, c2, c3 = st.beta_columns((0.4,1,1)) # Entre paréntesis se indica el tamaño de las columnas
+    c1, c2, c3 = st.columns((0.4,1,1)) # Entre paréntesis se indica el tamaño de las columnas
     c2.image('concluciones.jpg',width = 500)
     #Concluciones
     
@@ -386,7 +386,7 @@ if op== '🤝 Concluciones':
     st.markdown("<h3 style='text-align: justify;color:#000000; '></h3>", unsafe_allow_html=True)
 
     st.info('Enlaces de descarga de las bases de datos', )
-    c1, c2 , c3= st.beta_columns((1,1,1)) # Entre paréntesis se indica el tamaño de las columnas
+    c1, c2 , c3= st.columns((1,1,1)) # Entre paréntesis se indica el tamaño de las columnas
     
     c1.text('Descarga Base Empresas')
     c1.markdown(get_table_download_link(empresas), unsafe_allow_html=True)
