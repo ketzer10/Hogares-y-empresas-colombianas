@@ -66,7 +66,7 @@ if op == '👪 Hogares colombianos':
     c1, c2 = st.beta_columns((1.2,1)) # Entre paréntesis se indica el tamaño de las columnas
 
    
-    x4 = hogares.groupby('minimo')[['directorio']].count().reset_index().rename(columns = {'directorio' : 'acomulado'})
+    x4 = hogares.groupby('minimo')[['directorio']].count().reset_index().rename(beta_columns = {'directorio' : 'acomulado'})
 
     fig = px.pie(x4, values = 'acomulado', names ='minimo',
              title= '<b>Ingresos comparados con el salario minimo<b>')
