@@ -254,7 +254,7 @@ if op == '🏭 Empresas del pais':
     
     
     
-if op == '📊 Analisis Agrupado':
+if op == '📊 Análisis Agrupado':
     
     st.markdown("<h1 style='text-align: center;color:#E89B8A; '>Analisis Agrupado de las empresas y familias Colombianas</h1>", unsafe_allow_html=True)
     st.markdown("<h3 style='text-align: justify; '>Luego de dar una mirada a las condiciones de las familias y empresas, se realizara una exploracion del resultado al combinar los datos de estos dos grupos de interes.</h3>", unsafe_allow_html=True)
