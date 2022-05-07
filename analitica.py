@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import matplotlib.pyplot as plt
 import base64
-import openpyxl
+
 
 st.sidebar.image('https://www.pragma.com.co/hs-fs/hubfs/logo-udea.png?width=312&name=logo-udea.png',width=300,caption='MENU')
 #st.sidebar.markdown("<h3 style='text-align: center; color: #971B00;'>Menu</h3>", unsafe_allow_html=True)
